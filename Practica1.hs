@@ -152,6 +152,66 @@ fa f = f 2 + 1
 fa' :: (Int -> Int) -> Int
 fa' f = mod (f 1) 2
 
+--b
+fb :: Int -> (Int -> Int)
+fb x y = x
+
+fb' :: Int -> (Int -> Int)
+fb' x y = x * y
+
+--c
+fc :: (Int -> Int) -> (Int -> Int)
+fc f x = f x
+
+fc' :: (Int -> Int) -> (Int -> Int)
+fc' f x = f x + 1
+
+--d
+fd :: Int -> Bool
+fd x = if x > 0 then True else False
+
+fd' :: Int -> Bool
+fd' x = x == 2
+
+--e
+fe :: Bool -> (Bool -> Bool)
+fe x y = x || y 
+
+fe' :: Bool -> (Bool -> Bool)
+fe' x y = x && y 
+
+--f
+ff :: (Int, Char) -> Bool
+ff (x, y) = x > 0
+
+ff' :: (Int, Char) -> Bool
+ff' (x, y) = x < 0
+
+--g
+fg :: (Int, Int) -> Int
+fg (x, y) = x + y
+
+fg' :: (Int, Int) -> Int
+fg' (x, y) = x * y
+
+--h
+fh :: Int -> (Int, Int)
+fh x = (x, 2*x)
+
+fh' :: Int -> (Int, Int)
+fh' x = (1, x)
+
+--i
+fi :: a -> Bool
+fi x = True
+
+fi' :: a -> Bool
+fi' x = False
+
+--j) a -> a
+fj :: a -> a
+fj x = x
+
 {-
 5) Definir las siguientes funciones usando listas por comprensión:
 
